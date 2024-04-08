@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cpr0j1kjpbjoy"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_e1cem"]
+content_margin_left = 4.0
+content_margin_top = 0.0
+content_margin_right = 4.0
+content_margin_bottom = 0.0
+color = Color(0.5, 0.5, 0.5, 1)
+thickness = 40
+
+[resource]
+default_font_size = 200
+HSeparator/constants/separation = 120
+HSeparator/styles/separator = SubResource("StyleBoxLine_e1cem")

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dm1viujqarfj0"]
+
+[sub_resource type="Gradient" id="Gradient_eagts"]
+offsets = PackedFloat32Array(0.516234)
+colors = PackedColorArray(0.983498, 0.676681, 0.808893, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_8c33p"]
+gradient = SubResource("Gradient_eagts")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2n18m"]
+texture = SubResource("GradientTexture1D_8c33p")
+
+[sub_resource type="Theme" id="Theme_xtbhu"]
+Label/styles/normal = SubResource("StyleBoxTexture_2n18m")
+
+[node name="HistoryEntry" type="Label"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 251.0
+grow_horizontal = 2
+theme = SubResource("Theme_xtbhu")
+theme_override_font_sizes/font_size = 90
+text = "Change: -1   Balance: 12
+Reason: Default entry"
+horizontal_alignment = 1

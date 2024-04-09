@@ -16,3 +16,33 @@ var historyPath = "res://pages/history.tscn"
 func _on_expense_history_pressed():
 	get_tree().change_scene_to_file(historyPath)
 	pass # Replace with function body.
+
+
+func _on_bedtime_reward_min_value_changed(value):
+	SettingsFile.maximumBedtimeAward = value
+	SettingsFile.save()
+	pass # Replace with function body.
+
+
+func _on_earliestbedtime_h_slider_value_changed(value):
+	SettingsFile.earliestBedTime = value
+	SettingsFile.save()
+	pass # Replace with function body.
+
+
+func _on_latestbedtime_h_slider_value_changed(value):
+	SettingsFile.latestBedTime = value
+	SettingsFile.save()
+	pass # Replace with function body.
+
+
+func _on_insult_tax_value_changed(value):
+	SettingsFile.insultTax = value
+	SettingsFile.save()
+	pass # Replace with function body.
+
+
+func _on_bedtime_reward_max_value_changed(value):
+	SettingsFile.maximumBedtimeAward = value
+	SettingsFile.save()
+	pass # Replace with function body.

@@ -49,6 +49,10 @@ func _AddEntry(_entry : HistoryEntry):
 
 # Note: This can be called from anywhere inside the tree. This function
 # is path independent.
+
+'''
+returns all the entries ever
+'''
 func _LoadAllEntries():
 	
 	var entries = []

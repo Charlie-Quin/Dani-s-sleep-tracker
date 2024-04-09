@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Globals="*res://Scripts/Globals.gd"
 MoneyManager="*res://Scripts/MoneyManager.gd"
+SettingsFile="*res://Scripts/SettingsFile.gd"
 
 [display]
 
@@ -31,3 +32,7 @@ window/handheld/orientation=1
 [dotnet]
 
 project/assembly_name="Dani-s sleep tracker"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true

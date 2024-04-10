@@ -58,7 +58,7 @@ prefix = "Bed Reward Max: $"
 [node name="EarliestBedtime" type="Label" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Earliest Bedtime:10:30 AM"
+text = "Earliest Bedtime:10:30 PM"
 
 [node name="earliestbedtimeHSlider" type="HSlider" parent="MarginContainer/VBoxContainer/EarliestBedtime"]
 unique_name_in_owner = true
@@ -67,11 +67,14 @@ offset_left = -2.0
 offset_top = 111.0
 offset_right = 1078.0
 offset_bottom = 127.0
+max_value = 23.75
+step = 0.25
+value = 22.5
 
 [node name="LastestBedtime" type="Label" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Latest Bedtime:11:00 AM"
+text = "Latest Bedtime:11:00 PM"
 
 [node name="latestbedtimeHSlider" type="HSlider" parent="MarginContainer/VBoxContainer/LastestBedtime"]
 unique_name_in_owner = true
@@ -80,6 +83,9 @@ offset_left = -2.0
 offset_top = 111.0
 offset_right = 1078.0
 offset_bottom = 127.0
+max_value = 23.75
+step = 0.25
+value = 23.0
 
 [node name="insultTax" type="SpinBox" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true

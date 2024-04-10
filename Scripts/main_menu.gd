@@ -3,7 +3,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	%expense.text = "$" + str(MoneyManager.getCurrentBalance())
+	%expense.text = "$" + str(snapped(MoneyManager.getCurrentBalance(),0.01))
 	pass # Replace with function body.
 
 

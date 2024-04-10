@@ -49,7 +49,10 @@ horizontal_alignment = 1
 [node name="amountbox" type="SpinBox" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+max_value = 10000.0
+step = 0.01
 prefix = "$"
+select_all_on_focus = true
 
 [node name="reasonbox" type="TextEdit" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -68,6 +71,7 @@ layout_mode = 2
 size_flags_vertical = 4
 
 [node name="insultBedtimeButton" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Insult"
 
@@ -83,4 +87,5 @@ theme_override_font_sizes/font_size = 50
 text = "Version 1.0.0"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/insultBedtimeButton" to="." method="_on_insult_bedtime_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Cancel" to="." method="_on_cancel_pressed"]

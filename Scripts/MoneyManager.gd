@@ -88,10 +88,10 @@ func _LoadAllEntries():
 		
 		entries.append(new_object)
 		
-		print("save position",save.get_position())
+		#print("save position",save.get_position())
 		
 	
-	print(entries.size())
+	#print(entries.size())
 	if entries.size() > 0:
 		return entries
 	else:

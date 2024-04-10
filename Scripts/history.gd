@@ -12,7 +12,7 @@ func _ready():
 	entryList = MoneyManager.getAllEntries()
 	entryList.reverse()
 	
-	print(entryList)
+	#print(entryList)
 	
 	updateButtonStates()
 	updateList()
@@ -32,14 +32,14 @@ func updateList():
 	for i in maxItemsToDisplay:
 		
 		if entryList.size() <= i + sectionOfList:
-			print("finished iterating")
+			#print("finished iterating")
 			return
 		
 		
 		var historyEntry = load(pathToHistoryEntry).instantiate()
 		var entry : HistoryEntry = entryList[sectionOfList + i] 
 		
-		historyEntry.text = "Change: " + str(entry.change) + " Balance: " + str(entry.balance) + "\nDate: " + str(entry.dateTime) + "\nReason: " + str(entry.reason)
+		historyEntry.text = "Change: " + str(snapped(entry.change,0.01)) + " Balance: " + str(snapped(entry.balance,0.01)) + "\nDate: " + str(entry.dateTime) + "\nReason: " + str(entry.reason)
 		
 		%ListContainer.add_child(historyEntry)
 		
@@ -51,8 +51,8 @@ func updateButtonStates():
 	%prevButton.disabled = true if sectionOfList <= 0 else false
 	%nextButton.disabled = true if  entryList.size() <= sectionOfList + maxItemsToDisplay else false
 	
-	var currentPage = floor(sectionOfList/entryList.size()) + 1
-	var totalPages = max(1, ceil(entryList.size()/maxItemsToDisplay))
+	var currentPage = floor(sectionOfList/maxItemsToDisplay) + 1
+	var totalPages = ceil(entryList.size()/maxItemsToDisplay) + 1
 	
 	%pageLabel.text = "Page: " + str(currentPage) + "/" +  str(totalPages) + " (" + str(entryList.size()) + ")"
 	

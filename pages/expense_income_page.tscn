@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bgcwlhbuch6qj"]
+[gd_scene load_steps=4 format=3 uid="uid://bgcwlhbuch6qj"]
 
 [ext_resource type="Theme" uid="uid://cpr0j1kjpbjoy" path="res://Themes/main_menu.tres" id="1_lu6dq"]
 [ext_resource type="Script" path="res://Scripts/expense_income_page.gd" id="2_rasfq"]
+[ext_resource type="Script" path="res://Scripts/debug.gd" id="3_8qvd7"]
 
 [node name="Expense Income Page" type="Control"]
 layout_mode = 3
@@ -85,6 +86,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 50
 text = "Version 1.0.0"
+script = ExtResource("3_8qvd7")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Confirm" to="." method="_on_confirm_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/insultBedtimeButton" to="." method="_on_insult_bedtime_button_pressed"]

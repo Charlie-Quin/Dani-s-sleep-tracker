@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://1ni7t0wqsla6"]
+[gd_scene load_steps=5 format=3 uid="uid://1ni7t0wqsla6"]
 
 [ext_resource type="Theme" uid="uid://dxyurjfcse205" path="res://Themes/history.tres" id="1_8th1w"]
 [ext_resource type="Script" path="res://Scripts/history.gd" id="2_ht87g"]
 [ext_resource type="PackedScene" uid="uid://dm1viujqarfj0" path="res://pages/history_entry.tscn" id="3_ufnx6"]
+[ext_resource type="Script" path="res://Scripts/debug.gd" id="4_scp14"]
 
 [node name="History" type="Control"]
 layout_mode = 3
@@ -92,6 +93,7 @@ layout_mode = 2
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 50
 text = "Version 1.0.0"
+script = ExtResource("4_scp14")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/prevButton" to="." method="_on_prev_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/nextButton" to="." method="_on_next_button_pressed"]

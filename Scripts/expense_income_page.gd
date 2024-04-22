@@ -64,12 +64,12 @@ func calculateBedtimeReward():
 	if currentTime < SettingsFile.earliestBedTime - 12:
 		currentTime += 24
 	
-	print("currenttime: ", currentTime, 
-	" ",
-	SettingsFile.earliestBedTime,
-	" ",
-	SettingsFile.latestBedTime
-	)
+	#print("currenttime: ", currentTime, 
+	#" ",
+	#SettingsFile.earliestBedTime,
+	#" ",
+	#SettingsFile.latestBedTime
+	#)
 	
 	var reward = map(
 	currentTime,

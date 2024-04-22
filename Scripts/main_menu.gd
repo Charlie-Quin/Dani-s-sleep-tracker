@@ -25,3 +25,5 @@ func _on_expense_button_pressed():
 	Globals.isIncome = false
 	get_tree().change_scene_to_file(pathToIncomeExpensePage)
 	pass # Replace with function body.
+
+
